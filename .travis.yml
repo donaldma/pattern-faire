@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-- node
+  - node
 notifications:
   email: false
 deploy:
   provider: heroku
   api_key:
-    secure: JtakEJ/WS5ZAxpQAsgxelO/6jKHqybT5FbGXwRclTlg1cSKtDo9imiYMaCiTa7cP/YgKOreGbou7xOaHj9kxYHjzj6sbYhN8jcw55caq6sNWvzgpED32G2h9L4UO9NvWq+fMgGYheC9xuPfYBexmhML4rrV5I+AB9PiMKWzkcLmeJUhqkt86BSkINasX8WkyplVsLAIk4MvQEcfSznYbBcrPsnfYNpYdFbeTFzEYeqEA9xXmJ78eOwuQZ6eDn7QyRhw2tBDMNh1ArWZKPf2Wcsj4aoua13btm9Nq/pArQU41xd4Xdus/L3jbgjllWPFwqAelLrlUoPF6s0jpp184lx3EJBr4qFDVsaqmLz1y4f7ZKt4Og9jBFrhxxPVXa7LZHUuQyEeh2+7K6AYg54hCQs2rpTq17xGqcDJZYXPa8+vv66sjoD7VG9K9vE7KSB7oB25adIwSsGZTTpRtq6gDqLyabBdljk69W113ozGiWdWG+vz1dlMv9JG2+AA6+6BAielXARgxNCrlJ6wAt+2J0HamRJkxMfjQsUMb9+GDfJWYfPMBi2K9zW+bQjf3nXGOysAAFYIAHMdGc0TbW+yRrw4fAgijGK8HmTXTFhuiGKSjCVN5FurIBfNytuVek/rNUq5ULPvudxA1erVgfMKj6Ggnp4rH7F8uTCzsZOi923Q=
+    secure: vVH4dRKV8LtAqdARCX056B29zZU7jh5OFuXB8lZwzjp6q37uTThfL6ZhKXAXH3YbiQrz8DnPiVMdjmHmYRU/jYN8t61k0LqiF1GXSXATrujVnYm8J5mNH/OV5RjrFIDNlKKV0cNZTd2g5HkQ6vFavnwxK4f/jFPYVRdMDFWFAI4GDD5uz1c6CK7jYzN/aRjbTchF6OsXBfolEHrH6Kta1bPncXsLbgMGSsg1y16znmqNrjlPKqhClH9CASBOW0T3e/mWL9ydN3VBK5ZpWBA3cHCy4ip0Te1Uw7gZ989JUFnYKkWhpBtdZxTtdA9/HtyHcpYymrQzZM1jIywC5G8rAkPs9GTxcxtSerNvoq+n5H7hWcKLAqDjaQavXn+af51sJI7lpEelRceoT7JL1zos6LEHsUh7Lw2X+9+X/DM30R5WhmUocZartR+7hlZNGbS1XSKTe+EGWh8WBvsyZQJd2aBWU/lW8PMO7SaiDE7YYVy612OLsZXu96b33ewb+4xYx4jjzrQt6LE47Yw2ljEn/CEAKxfVDVMlOd2tFRWrwv4tYJc+1qi8tDBqu2kRV4T/XFrWOhEMYiF7dEwwqEM432u3cR1359glfzhR0tc6DOdfGubi13GP7gSkBTh94frKVyGOwnXwhRwJkvxB9W67BkdApQ3C5wUGne2Y4p4tRZA=
   app: pattern-faire
   on:
     branch: master
     repo: donaldma/pattern-faire
   run:
-    - "knex migrate:latest"
-    - "knex seed:run"
+    - 'knex migrate:latest'
+    - 'knex seed:run'
