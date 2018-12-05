@@ -1,0 +1,196 @@
+.project-container {
+  background: $color-3;
+  min-height: 100vh;
+}
+
+.project-content {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @include MQ(M) {
+    padding: 125px 0;
+  }
+}
+
+.project-label {
+  @extend .uppercase-helvetica;
+  font-size: 11px;
+  margin-bottom: 1rem;
+}
+
+.project-sublabel {
+  font-family: $font-secondary;
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.project-select {
+  height: 150px;
+  padding: 4rem 2rem;
+  background-color: $color-2;
+  color: $color-1;
+  border: 1px solid #ddd;
+  @extend .uppercase-helvetica;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  &:hover {
+    border: 1px solid $color-1;
+  }
+}
+
+.project-select-active {
+  background-color: $color-1;
+  color: $color-2;
+  border: none;
+  border: 1px solid $color-1;
+  &:hover {
+    border: 1px solid #ddd;
+  }
+}
+
+.notes-field {
+  height: 300px;
+}
+
+.rc-slider-handle {
+  cursor: pointer !important;
+  border: solid 2px $color-1 !important;
+  background-color: $color-1 !important;
+  box-shadow: none !important;
+}
+
+.rc-slider-step {
+  cursor: pointer !important;
+}
+
+.rc-slider-track {
+  background-color: $color-1 !important;
+  height: 2px !important;
+}
+
+.rc-slider-rail {
+  height: 2px !important;
+}
+
+.budget-text {
+  @extend .uppercase-helvetica;
+  font-size: 20px;
+  margin: 3rem 0;
+}
+
+.budget-label {
+  @extend .uppercase-helvetica;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.counter {
+  display: inline-block;
+}
+
+.counter .input-text.count {
+  width: 35px;
+  height: 40px;
+  padding: 0 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  @extend .uppercase-helvetica;
+}
+
+.counter.buttons-added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.counter.buttons-added input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none;
+}
+
+.counter.buttons-added .minus,
+.counter.buttons-added .plus {
+  padding: 7px 10px 8px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.counter.buttons-added .minus:disabled {
+  cursor: default;
+  opacity: 0.7;
+  &:hover {
+    background-color: #ffffff;
+  }
+}
+
+.counter.buttons-added .minus {
+  border-right: 0;
+}
+
+.counter.buttons-added .plus {
+  border-left: 0;
+}
+
+.counter.buttons-added .minus:hover,
+.counter.buttons-added .plus:hover {
+  background: #eeeeee;
+}
+
+.counter input::-webkit-outer-spin-button,
+.counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+.counter.buttons-added .minus:focus,
+.counter.buttons-added .plus:focus {
+  outline: none;
+}
+
+.geosuggest__item {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.geosuggest__suggests-wrapper {
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  z-index: 1199;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  font-family: $font-secondary;
+  font-size: 13px;
+  width: 90%;
+}
+
+.geosuggest__suggests {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.geosuggest__suggests--hidden {
+  max-height: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
+.geosuggest__item--active {
+  background-color: #f5f5f5;
+}
+
+.geosuggest__item {
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  &:focus {
+    outline: none;
+  }
+}

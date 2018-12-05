@@ -1,0 +1,12 @@
+<div>
+  <ul style='list-style-type: none;padding: 0;'>
+    {{#each this}}
+    {{#if this.value}}
+    <li>
+      <h4>{{this.key}}</h4>
+      <p>{{{this.value}}}</p>
+    </li>
+    {{/if}}
+    {{/each}}
+  </ul>
+</div>

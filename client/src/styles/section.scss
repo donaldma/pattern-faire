@@ -1,0 +1,11 @@
+.section-img {
+  width: 80%;
+  @media (max-width: $lg) {
+    padding-bottom: 3rem;
+    width: 70% !important;
+  }
+}
+
+.section-subheader {
+  @extend .uppercase-helvetica;
+}

@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: JtakEJ/WS5ZAxpQAsgxelO/6jKHqybT5FbGXwRclTlg1cSKtDo9imiYMaCiTa7cP/YgKOreGbou7xOaHj9kxYHjzj6sbYhN8jcw55caq6sNWvzgpED32G2h9L4UO9NvWq+fMgGYheC9xuPfYBexmhML4rrV5I+AB9PiMKWzkcLmeJUhqkt86BSkINasX8WkyplVsLAIk4MvQEcfSznYbBcrPsnfYNpYdFbeTFzEYeqEA9xXmJ78eOwuQZ6eDn7QyRhw2tBDMNh1ArWZKPf2Wcsj4aoua13btm9Nq/pArQU41xd4Xdus/L3jbgjllWPFwqAelLrlUoPF6s0jpp184lx3EJBr4qFDVsaqmLz1y4f7ZKt4Og9jBFrhxxPVXa7LZHUuQyEeh2+7K6AYg54hCQs2rpTq17xGqcDJZYXPa8+vv66sjoD7VG9K9vE7KSB7oB25adIwSsGZTTpRtq6gDqLyabBdljk69W113ozGiWdWG+vz1dlMv9JG2+AA6+6BAielXARgxNCrlJ6wAt+2J0HamRJkxMfjQsUMb9+GDfJWYfPMBi2K9zW+bQjf3nXGOysAAFYIAHMdGc0TbW+yRrw4fAgijGK8HmTXTFhuiGKSjCVN5FurIBfNytuVek/rNUq5ULPvudxA1erVgfMKj6Ggnp4rH7F8uTCzsZOi923Q=
+  app: pattern-faire
+  on:
+    branch: master
+    repo: donaldma/pattern-faire
+  run:
+    - "knex migrate:latest"
+    - "knex seed:run"

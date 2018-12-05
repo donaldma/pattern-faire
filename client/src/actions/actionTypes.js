@@ -1,0 +1,3 @@
+export const POST_ACTIVITY = 'POST_ACTIVITY'
+export const POST_REFERRAL = 'POST_REFERRAL'
+export const POST_PROJECT = 'POST_PROJECT'
