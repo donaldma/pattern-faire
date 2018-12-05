@@ -19,6 +19,7 @@ const BotHelper = require('./utils/BotHelper')
 
 /**
  * START CRON JOBS
+ * testTrigger
  *
  */
 cron.schedule('59 7 * * *', () => {
