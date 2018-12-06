@@ -82,7 +82,9 @@ module.exports = (dbHelper) => {
         `Project #${addProjectResponse[0].id} confirmed`,
         'Project-Client'
       )
-      await EmailHelper.sendEmail(emailRecipients, emailEntity, 'Pattern Faire', 'New Project Request', 'Project')
+
+      const subject = process.env.NODE_ENV === 'production' ? 'New Project Request' : 'New Project Request - DEV'
+      await EmailHelper.sendEmail(emailRecipients, emailEntity, 'Pattern Faire', subject, 'Project')
 
       res.json({ status: 200, message: 'ok' })
     } catch (err) {
