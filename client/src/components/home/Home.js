@@ -25,7 +25,7 @@ class Home extends Component {
         <div className='home-headers-container'>
           <div className='row'>
             <div className='col-12'>
-              <h1 className='home-header'>Meet the best contractors and interiors designers.</h1>
+              <h1 className='home-header'>Meet the best contractors and interior designers.</h1>
               <h3 className='home-subheader'>
                 Sign up and Pattern will select the perfect design team for your project.
               </h3>
