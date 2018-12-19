@@ -16,7 +16,7 @@ module.exports = (dbHelper) => {
 
       if (!referrerEmail || !validator.validate(referrerEmail))
         throw createError(400, 'Please enter a valid Referrer Email')
-      if (!clientEmail || !validator.validate(referrerEmaclientEmailil))
+      if (!clientEmail || !validator.validate(clientEmail))
         throw createError(400, 'Please enter a valid Client Email')
       if (referrerEmail === clientEmail) throw createError(403, 'You cannot refer yourself!')
 
