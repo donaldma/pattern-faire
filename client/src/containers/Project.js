@@ -18,7 +18,7 @@ class Project extends Component {
     super(props)
 
     this.state = {
-      email: props.email || '',
+      email: props.location.state && props.location.state.email || '',
       fullName: '',
       locationType: undefined,
       businessName: '',
