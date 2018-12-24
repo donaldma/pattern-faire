@@ -9,12 +9,24 @@ import GetStarted from './GetStarted'
 class Home extends Component {
   state = {
     height: 0,
-    ghostDivDisplay: 'block'
+    ghostDivDisplay: 'block',
+    email: ''
   }
 
   componentDidMount() {
     this.setState({ height: window.innerHeight })
     setTimeout(() => this.setState({ ghostDivDisplay: 'none' }), 1000)
+  }
+
+  handleChange = (state, val) => {
+    this.setState({ [state]: val })
+  }
+
+  handleNext = () => {
+    this.props.history.push({
+      pathname: '/project',
+      state: { email: this.state.email }
+    })
   }
 
   render() {
@@ -29,9 +41,16 @@ class Home extends Component {
               <h3 className='home-subheader'>
                 Sign up and Pattern will select the perfect design team for your project.
               </h3>
-              <Link to='/project' className='btn main-btn'>
-                Get Started
-              </Link>
+              <input
+                type='email'
+                className='referral-form__field'
+                placeholder='Your Email'
+                onChange={(e) => this.handleChange('email', e.target.value)}
+                value={this.state.email}
+              />
+              <button onClick={() => this.handleNext()} className='btn home-btn__primary home-btn__inside'>
+                Next
+              </button>
             </div>
           </div>
         </div>
