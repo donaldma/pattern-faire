@@ -24,7 +24,7 @@ const BotHelper = require('./utils/BotHelper')
  */
 cron.schedule('59 7 * * *', () => {
   console.log('Running Analytics Cron Job')
-  BotHelper.runUniqueUsersReport(dbHelper)
+  // BotHelper.runUniqueUsersReport(dbHelper)
 })
 /**
  * END CRON JOBS
